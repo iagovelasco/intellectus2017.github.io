@@ -1,0 +1,204 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+canvas {
+	display: block; /* fix necessary to remove space at bottom of canvas */
+	vertical-align: top;
+}
+
+#stats {
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+
+#about {
+	color: #fff;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	font-style: italic;
+}
+
+a, a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* loading animation */
+
+#loading {
+	width: 100%;
+	height: 100%;
+	background: #111;
+	position: absolute;
+	z-index: 10;
+}
+
+.spinner {
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	font-size: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -15px;
+}
+
+.spinner > div {
+	background-color: #fff;
+	height: 100%;
+	width: 6px;
+	display: inline-block;
+
+	-webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+	animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+
+/*
+
+=====================
+INTRO
+=====================
+
+*/
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  text-align: center;
+  color: #fff;
+}
+.intro h1,
+.intro h2,
+.intro h3 {
+  color: #fff;
+}
+.intro span.bold {
+  font-weight: 700;
+}
+.intro h1 {
+  font-size: 76px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.intro p {
+  font-size: 23px;
+}
+@media (min-width: 1200px) {
+  .intro h1 {
+    font-size: 116px;
+  }
+  .intro p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .intro h1 {
+    font-size: 42px;
+  }
+  .intro p {
+    font-size: 18px;
+  }
+}
+.intro .icon {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: solid 2px #FCCD00;
+  border-radius: 20px;
+  z-index: 3;
+  color: #FCCD00;
+}
+.intro .content {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 3;
+}
+.intro.colour-background {
+  background: #5091da;
+}
+.intro.image-background {
+  background: url('../img/startup-room.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+}
+.intro.image-background .overlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #6d1d61;
+  opacity: 0.80;
+  filter: alpha(opacity=93);
+  z-index: 2;
+}
+.intro a {
+  color: #fff;
+}
+.intro a:hover,
+.intro a:focus {
+  color: #fff;
+}
+.no-padding-top {
+  padding-top: 0;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+@-webkit-keyframes stretchdelay {
+	0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+	20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+	0%, 40%, 100% { 
+		transform: scaleY(0.4);
+		-webkit-transform: scaleY(0.4);
+	}  20% { 
+		transform: scaleY(1.0);
+		-webkit-transform: scaleY(1.0);
+	}
+}
